@@ -47,6 +47,25 @@ const HomePage = () => {
       >
         Docs
       </Link>
+      <br/>
+      <Link
+        href={{
+          pathname: `/_lib`,
+        }}
+      >
+        page with underscore in url _lib by %5F
+      </Link>
+      <br/>
+
+      <Link
+        href={{
+          pathname: `/_privateLib`,
+        }}
+      >
+        private page which will not be shown for the user because of underscore in the name of folder as a page route. Leed to page not found
+      </Link>
+      <br/>
+
     </main>
   );
 };
