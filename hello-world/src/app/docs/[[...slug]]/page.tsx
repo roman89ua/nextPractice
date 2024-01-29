@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import {concepts, features} from "@/app/docs/[[...slug]]/consts";
 
-const features = ["feature1", "feature2", "feature3"];
-const concepts = ["concept1", "concept2", "concept13", "concept3", "concept5"];
+
 
 export type AllFeatures = (typeof features)[number];
 export type AllConcepts = (typeof concepts)[number];
