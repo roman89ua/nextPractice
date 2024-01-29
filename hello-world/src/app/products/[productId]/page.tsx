@@ -17,7 +17,32 @@ const reviews: {
     title: "Product review 3",
   },
 ];
-const ProductDetails = ({ params }: { params: { productId: string } }) => {
+
+import { Metadata } from "next";
+
+type ProductDetailsProps = { params: { productId: string } };
+
+export const generateMetadata = async ({
+  params,
+}: ProductDetailsProps): Promise<Metadata> => {
+  return await new Promise((resolve) => {
+    setTimeout(
+      () =>
+        resolve({
+          // this absolute title for metadata will overwrite even absolute metadata title from parent layout or page
+          // and any of current ways to set title (default, template, absolute) will overwrite event absolute title from main layout
+          title: {
+            default: `Product ${params.productId}`,
+            template: `Product ${params.productId}`,
+            // absolute: "Absolute product title",
+          },
+        }),
+      2000,
+    );
+  });
+};
+
+const ProductDetails = ({ params }: ProductDetailsProps) => {
   return (
     <section>
       <h1>Product details page</h1>
