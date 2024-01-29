@@ -12,7 +12,7 @@ const HomePage = () => {
       >
         products
       </Link>
-      <br />
+      <br/>
       <Link
         href={{
           pathname: `/blog`,
@@ -20,7 +20,7 @@ const HomePage = () => {
       >
         blog
       </Link>
-      <br />
+      <br/>
 
       <Link
         href={{
@@ -29,7 +29,7 @@ const HomePage = () => {
       >
         profile
       </Link>
-      <br />
+      <br/>
 
       <Link
         href={{
@@ -38,7 +38,7 @@ const HomePage = () => {
       >
         about
       </Link>
-      <br />
+      <br/>
 
       <Link
         href={{
@@ -62,8 +62,38 @@ const HomePage = () => {
           pathname: `/_privateLib`,
         }}
       >
-        private page which will not be shown for the user because of underscore in the name of folder as a page route. Leed to page not found
+        private page which will not be shown for the user because of underscore in the name of folder as a page route.
+        Leed to page not found
       </Link>
+      <br/>
+
+      <p>Auth route group start</p>
+      <Link
+        href={{
+          pathname: `/register`,
+        }}
+      >
+        register
+      </Link>
+      <br/>
+
+      <Link
+        href={{
+          pathname: `/forgoPassword`,
+        }}
+      >
+        forgoPassword
+      </Link>
+      <br/>
+
+      <Link
+        href={{
+          pathname: `/login`,
+        }}
+      >
+        login
+      </Link>
+      <p>Auth route group end</p>
       <br/>
 
     </main>
