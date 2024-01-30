@@ -1,3 +1,5 @@
+"use client";
+
 const getRandom = (count: number) => Math.floor(Math.random() * count);
 const AboutPage = () => {
   if (getRandom(2) === 1) {
