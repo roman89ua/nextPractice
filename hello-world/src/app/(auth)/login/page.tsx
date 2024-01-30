@@ -1,4 +1,4 @@
-import LoginBtn from "@/app/components/LoginBtn";
+import LoginBtn from "../../../components/LoginBtn";
 
 const LoginPage = () => (
   <>

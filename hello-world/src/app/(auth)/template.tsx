@@ -1,6 +1,6 @@
 "use client";
 
-import TextInput from "@/app/components/TextInput";
+import TextInput from "../../components/TextInput";
 
 const AuthPartTemplate = ({ children }: { children: React.ReactNode }) => {
   return (

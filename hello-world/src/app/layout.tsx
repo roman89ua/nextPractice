@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import "./global.scss";
-import MainNavbar from "./components/MainNavbar";
+import MainNavbar from "../components/MainNavbar";
 
 export const metadata: Metadata = {
   title: {
