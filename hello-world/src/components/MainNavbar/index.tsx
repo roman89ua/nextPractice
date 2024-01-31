@@ -48,6 +48,11 @@ const mainLinks: { title: string; pathname: string }[] = [
     title: "Dashboard",
     pathname: "/dashboard",
   },
+
+  {
+    title: "Gallery",
+    pathname: "/gallery",
+  },
 ];
 const MainNavbar = () => {
   const path = usePathname();
