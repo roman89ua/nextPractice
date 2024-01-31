@@ -20,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="h-svh">
-        <header className="bg-blue-950 p-5 w-full fixed top-0 left-0 right-0 text-white">
+    <html lang="en" className="m-0 h-full overflow-hidden">
+      <body className="m-0 h-full overflow-hidden flex flex-col">
+        <header className="bg-blue-950 p-5 w-full text-white">
           <Link href="/">
             <h1 className="py-5">Home</h1>
           </Link>
@@ -31,10 +31,8 @@ export default function RootLayout({
             <MainNavbar />
           </nav>
         </header>
-        <main className="py-36 px-5 h-svh">{children}</main>
-        <footer className="bg-blue-400 p-5 w-full fixed bottom-0 left-0 right-0">
-          footer
-        </footer>
+        <main className="flex-1 overflow-auto">{children}</main>
+        <footer className="bg-blue-400 p-5 w-full">footer</footer>
       </body>
     </html>
   );
