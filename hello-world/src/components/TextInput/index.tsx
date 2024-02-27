@@ -6,8 +6,8 @@ const TextInput = ({ title }: { title: string }) => {
   const [value, setValue] = useState<string>("");
 
   return (
-    <label htmlFor="anyInput">
-      <span>Any value input | {title}</span>
+    <label htmlFor="anyInput" className="flex flex-col">
+      <span className="">{title ? title : "Any value input" }</span>
       <input
         className="border-2 border-blue-950"
         type="text"

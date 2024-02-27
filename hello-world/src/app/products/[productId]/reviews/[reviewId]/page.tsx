@@ -1,9 +1,17 @@
 import React from "react";
+import {Metadata} from "next";
+
+type MetadataType = {productId: string; reviewId: string }
+export const generateMetadata = ({params}: {params: MetadataType }): Metadata  => ({
+  title: `Product ${params?.productId}, review: ${params?.reviewId}`,
+
+  description: "Not required description change from review page"
+})
 
 const ReviewDetails = ({
   params,
 }: {
-  params: { productId: string; reviewId: string };
+  params: MetadataType;
 }) => {
   const { productId, reviewId } = params;
   return (

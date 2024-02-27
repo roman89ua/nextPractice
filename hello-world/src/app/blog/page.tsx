@@ -1,4 +1,9 @@
 import Link from "next/link";
+import {Metadata} from "next";
+export const metadata: Metadata = {
+  title: "BLOG TITLE FROM METADATA",
+  description: "DESCRIPTION FOR BLOG PAGE"
+}
 
 const BlogPage = () => {
   return (

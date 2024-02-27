@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: {
     // absolute: "", // this absolute title will overwrite all title from current layout metadata
     // but if you have metadata  on page level it will overwrite metadata from current layout
-    default: "some default title",
+    default:  "some default title",
     template: "%s | Rest of template title",
     absolute: "Absolute main title",
   },

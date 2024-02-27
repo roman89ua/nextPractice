@@ -8,7 +8,8 @@ const LoginBtn = () => {
   function loginHandler() {
     console.log("Logged in");
 
-    replace("/");
+    // replace("/");
+    back();
   }
 
   return (

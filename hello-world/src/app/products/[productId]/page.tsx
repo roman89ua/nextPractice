@@ -37,7 +37,7 @@ export const generateMetadata = async ({
             // absolute: "Absolute product title",
           },
         }),
-      2000,
+      1000,
     );
   });
 };
@@ -50,6 +50,7 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
       <br />
       <h2>Reviews</h2>
       {reviews.map((review) => (
+        <>
         <Link
           key={`${review.id}, ${review.title}`}
           href={{
@@ -58,6 +59,8 @@ const ProductDetails = ({ params }: ProductDetailsProps) => {
         >
           {review.title}
         </Link>
+          <br />
+        </>
       ))}
     </section>
   );

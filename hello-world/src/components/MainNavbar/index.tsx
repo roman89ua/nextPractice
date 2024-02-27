@@ -48,10 +48,27 @@ const mainLinks: { title: string; pathname: string }[] = [
     title: "Dashboard",
     pathname: "/dashboard",
   },
+  {
+    title: "Second Dashboard",
+    pathname: "/second-dashboard",
+  },
 
   {
     title: "Gallery",
     pathname: "/gallery",
+  },
+
+  {
+    title: "f1",
+    pathname: "/f1",
+  },
+  {
+    title: "intercepted-route",
+    pathname: "/intercepted-route",
+  },
+  {
+    title: "Album",
+    pathname: "/album",
   },
 ];
 const MainNavbar = () => {

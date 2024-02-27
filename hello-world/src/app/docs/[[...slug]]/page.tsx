@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import {concepts, features} from "@/app/docs/[[...slug]]/consts";
 
-
-
 export type AllFeatures = (typeof features)[number];
 export type AllConcepts = (typeof concepts)[number];
 const isAFeature = (param: string): param is AllFeatures =>
@@ -15,15 +13,15 @@ const isAConcept = (param: string): param is AllConcepts =>
 
 const DocsPage = ({ params }: { params: { slug: string[] } }) => {
   const isArray = Array.isArray(params?.slug);
-  const slugLength2 = isArray && params?.slug.length === 2;
+  const slugLength = isArray && params?.slug.length === 2;
   const hasFeatureParam = isArray && isAFeature(params?.slug[0]);
 
   const hasConceptParam = isArray && isAConcept(params?.slug[1]);
 
   const thisRouteNotExist =
     (isArray && params?.slug.length >= 3) ||
-    (slugLength2 && hasConceptParam && !hasFeatureParam) ||
-    (slugLength2 && !hasConceptParam && hasFeatureParam) ||
+    (slugLength && hasConceptParam && !hasFeatureParam) ||
+    (slugLength && !hasConceptParam && hasFeatureParam) ||
     (isArray && params?.slug.length === 1 && !hasFeatureParam);
 
   if (thisRouteNotExist) {
@@ -56,6 +54,7 @@ const DocsPage = ({ params }: { params: { slug: string[] } }) => {
       </section>
     );
   }
+
   return (
     <section>
       <h1>Docs page</h1>

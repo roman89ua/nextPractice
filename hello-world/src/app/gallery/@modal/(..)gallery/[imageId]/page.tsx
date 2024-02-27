@@ -1,4 +1,3 @@
-import React from "react";
 import Modal from "@/components/Modal";
 import GalleryItem from "@/components/GalleryItem";
 import { GALLERY_DATA } from "@/app/gallery/galleryData";
