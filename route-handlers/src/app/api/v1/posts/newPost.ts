@@ -14,7 +14,6 @@ export async function newPost(data: Omit<PostData, "id">): Promise<PostData> {
   })
     .then((response) => response.json())
     .catch((e: Error) => {
-      console.error(`new post request error: ${e}`);
       return {
         status: 400,
         error: e,

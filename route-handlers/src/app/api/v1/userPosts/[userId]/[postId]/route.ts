@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: { userId: string; postId: string } },
 ) {
   const result = await fetch(
@@ -26,7 +26,7 @@ export async function PATCH(
 }
 
 export async function DELETE(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: { userId: string; postId: string } },
 ) {
   const result = await fetch(
