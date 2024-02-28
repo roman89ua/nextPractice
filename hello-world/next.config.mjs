@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['via.placeholder.com', 'upload.wikimedia.org']
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'via.placeholder.com'
+            },
+
+        ]
     }
 };
 
