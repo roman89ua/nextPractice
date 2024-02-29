@@ -35,6 +35,6 @@ export async function DELETE(
       method: "DELETE",
     },
   ).then((response) => response.json());
-  console.log("delete result", result);
+
   return NextResponse.json(result);
 }

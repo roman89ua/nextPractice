@@ -5,6 +5,8 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { userId: string } },
 ) {
+  console.log({ request });
+
   const result = await fetch(
     `https://jsonplaceholder.typicode.com/posts?userId=${params.userId}`,
   ).then((response) => response.json());
